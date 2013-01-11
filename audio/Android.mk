@@ -28,6 +28,8 @@ LOCAL_C_INCLUDES += \
 	$(call include-path-for, audio-utils) \
 	$(call include-path-for, audio-effects)
 
+LOCAL_CFLAGS := -fno-strict-aliasing
+
 LOCAL_SHARED_LIBRARIES := liblog libcutils libtinyalsa libaudioutils libdl libexpat
 
 include $(BUILD_SHARED_LIBRARY)
